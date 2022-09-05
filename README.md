@@ -71,7 +71,12 @@ export TF_VAR_ssh_pub_key=
 
 kubectl edit svc prometheus-grafana
 
-Проверим работу grafana
+Проверим работу grafana 
+
+UserName: admin
+
+Password: prom-operator
+
 ![grafana](./img/grafana.png)
 
 
