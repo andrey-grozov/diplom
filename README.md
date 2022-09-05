@@ -45,7 +45,7 @@ export TF_VAR_ssh_pub_key=
 
 Приложение создано на базе `nginx:stable` с измененной индексной страницей.
 
-[ссылка на приложение](./deploy/testapp/docker/)
+[ссылка на приложение](https://github.com/andrey-grozov/testapp)
 
 Сохраняем приложение в dockerhub
 ![dockerhub](./img/docker-hub.png)
