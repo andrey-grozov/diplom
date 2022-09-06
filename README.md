@@ -95,5 +95,12 @@ Password: prom-operator
 
 ### 5. Установка и настройка CI/CD
 
+ссылка на приложение http://62.84.127.174:30001/
+
+ссылка на grafana http://62.84.127.174:30002 
+
+login admin password prom-operator
+
+ссылка на jenkins http://62.84.127.174:30000
 
 
