@@ -1,16 +1,16 @@
 all:
   hosts:
     cp1:
-      ansible_host: 51.250.4.128
+      ansible_host: 62.84.127.174
       ansible_user: ubuntu
     node1:
-      ansible_host: 62.84.116.159
+      ansible_host: 51.250.82.156
       ansible_user: ubuntu
     node2:
-      ansible_host: 51.250.97.94
+      ansible_host: 84.201.136.184
       ansible_user: ubuntu
     node3:
-      ansible_host: 51.250.46.180
+      ansible_host: 51.250.47.217
       ansible_user: ubuntu
   children:
     kube_control_plane:
