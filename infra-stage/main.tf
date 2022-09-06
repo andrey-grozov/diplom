@@ -40,9 +40,9 @@ resource "yandex_compute_instance" "stage-k8s-cp1" {
     ssh-keys = "ubuntu:${var.ssh_pub_key}"
   }
 
-  scheduling_policy {
-    preemptible = true
-  }
+#  scheduling_policy {
+#    preemptible = true
+#  }
 }
 # нода 1
 resource "yandex_compute_instance" "stage-k8s-node1" {

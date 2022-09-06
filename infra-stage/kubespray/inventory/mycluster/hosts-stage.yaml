@@ -4,13 +4,13 @@ all:
       ansible_host: 51.250.4.128
       ansible_user: ubuntu
     node1:
-      ansible_host: 51.250.92.36
+      ansible_host: 62.84.116.159
       ansible_user: ubuntu
     node2:
-      ansible_host: 51.250.105.248
+      ansible_host: 51.250.97.94
       ansible_user: ubuntu
     node3:
-      ansible_host: 51.250.34.3
+      ansible_host: 51.250.46.180
       ansible_user: ubuntu
   children:
     kube_control_plane:
