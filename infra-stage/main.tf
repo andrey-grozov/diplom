@@ -44,7 +44,7 @@ resource "yandex_compute_instance" "stage-k8s-cp1" {
 #    preemptible = true
 #  }
 }
-# нода 1
+# пїЅпїЅпїЅпїЅ 1
 resource "yandex_compute_instance" "stage-k8s-node1" {
   name = "stage-k8s-node1"
   hostname = "stage-k8s-node1"
@@ -75,12 +75,12 @@ resource "yandex_compute_instance" "stage-k8s-node1" {
     ssh-keys = "ubuntu:${var.ssh_pub_key}"
   }
 
-  scheduling_policy {
+/*   scheduling_policy {
     preemptible = true
-  }
+ */  }
 }
 
-# нода 2
+# пїЅпїЅпїЅпїЅ 2
 resource "yandex_compute_instance" "stage-k8s-node2" {
   name = "stage-k8s-node2"
   hostname = "stage-k8s-node2"
@@ -110,12 +110,12 @@ resource "yandex_compute_instance" "stage-k8s-node2" {
     ssh-keys = "ubuntu:${var.ssh_pub_key}"
   }
 
-  scheduling_policy {
+/*   scheduling_policy {
     preemptible = true
-  }
+ */  }
 }
 
-# нода 3
+# пїЅпїЅпїЅпїЅ 3
 resource "yandex_compute_instance" "stage-k8s-node3" {
   name = "stage-k8s-node3"
   hostname = "stage-k8s-node3"
@@ -145,9 +145,9 @@ resource "yandex_compute_instance" "stage-k8s-node3" {
     ssh-keys = "ubuntu:${var.ssh_pub_key}"
   }
 
-  scheduling_policy {
+/*   scheduling_policy {
     preemptible = true
-  }
+ */  }
 }
 
 
