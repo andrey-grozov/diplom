@@ -105,9 +105,9 @@ http://admin:11087da3e67146fdbdde47018c90a0ecca@dserv.dynu.com:8080/job/testapp-
 
 При записи TAG v0.0.5 происходит автоматическая сборка и деплой (полный результат можно посмотреть в jenkins, ссылка ниже)
 
-![jenkins_deploy] (./img/jenkins_deploy.png)
+![jenkins_deploy](./img/jenkins_deploy.png)
 
-![jenkins_deploy] (./img/jenkins_deploy1.png)
+![jenkins_deploy](./img/jenkins_deploy1.png)
 
 
 Результат деплоя.
