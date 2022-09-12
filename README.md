@@ -28,6 +28,7 @@ export TF_VAR_ssh_pub_key=
 ![Виртуальные машины](./img/kubecluster.png)
 
 Создали балансировщик для приложения.
+
 ![network load balancer](./img/nlb.png)
 
 ### 2. Создание Kubernetes кластера
