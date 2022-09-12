@@ -27,6 +27,9 @@ export TF_VAR_ssh_pub_key=
 
 ![Виртуальные машины](./img/kubecluster.png)
 
+Создали балансировщик для приложения.
+![network load balancer](./img/nlb.png)
+
 ### 2. Создание Kubernetes кластера
 
 Для создание кластера используем Kubespray
@@ -65,11 +68,11 @@ export TF_VAR_ssh_pub_key=
 
 установим систему 
 
-    helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
+    helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring --debug
 
 По умолчанию служба grafana доступна в кластере с использованием типа ClusterIP, для доступа к ней извне изменим тип на NodePort.
 
-kubectl edit svc prometheus-grafana
+    kubectl edit svc prometheus-grafana -n monitoring
 
 Проверим работу grafana 
 
@@ -116,7 +119,7 @@ http://admin:11087da3e67146fdbdde47018c90a0ecca@dserv.dynu.com:8080/job/testapp-
     NAME      READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                  SELECTOR
     testapp   3/3     3            3           3h34m   testapp      mrgrav/testapp:v0.0.5   app=testapp
 
-ссылка на приложение http://130.193.51.34:30001/
+ссылка на приложение http://178.154.200.99/
 
 ссылка на grafana http://130.193.51.34:30002 
 login admin password prom-operator
