@@ -95,6 +95,16 @@ Password: prom-operator
 
 ### 5. Установка и настройка CI/CD
 
+Делаем webhook для выполнения сборки из docker файла в gitlab
+
+http://admin:11087da3e67146fdbdde47018c90a0ecca@dserv.dynu.com:8080/job/testapp-deploy/build?token=docker-build
+
+Делаем webhook для выполнения сборки из docker файла в gitlab и деплоя в kubernetes
+
+http://admin:11087da3e67146fdbdde47018c90a0ecca@dserv.dynu.com:8080/job/testapp-deploy/build?token=docker-deploy
+
+
+
 ссылка на приложение http://62.84.127.174:30001/
 
 ссылка на grafana http://62.84.127.174:30002 
