@@ -1,9 +1,9 @@
-# Создание VPC
+# network VPC
 resource "yandex_vpc_network" "stage-net" {
   name = "${var.vpc_netname}"
 }
 
-# подсеть 1
+# subnet 1
 resource "yandex_vpc_subnet" "stage-subnet1" {
 
   v4_cidr_blocks = ["192.168.10.0/24"]
@@ -12,7 +12,7 @@ resource "yandex_vpc_subnet" "stage-subnet1" {
   name 		 = "stage-subnet1"
 }
 
-# подсеть 2
+# subnet 2
 resource "yandex_vpc_subnet" "stage-subnet2" {
 
   v4_cidr_blocks = ["192.168.20.0/24"]
@@ -21,7 +21,7 @@ resource "yandex_vpc_subnet" "stage-subnet2" {
   name 		 = "stage-subnet2"
 }
 
-# подсеть 3
+# sybnet 3
 resource "yandex_vpc_subnet" "stage-subnet3" {
 
   v4_cidr_blocks = ["192.168.30.0/24"]
@@ -30,7 +30,7 @@ resource "yandex_vpc_subnet" "stage-subnet3" {
   name 		 = "stage-subnet3"
 }
 
-# публичный адрес для control plane
+# external permanent ip for  control plane
 resource "yandex_vpc_address" "ext_addr_cp" {
   name = "Control Plane Public IP"
   external_ipv4_address {

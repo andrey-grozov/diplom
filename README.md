@@ -65,9 +65,9 @@ export TF_VAR_ssh_pub_key=
 
 установим систему 
 
-    helm install prometheus prometheus-community/kube-prometheus-stack
+    helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 
-По умолчанию служба grafana доступны в кластере с использованием типа ClusterIP, для доступа к ним извне изменим тип на NodePort.
+По умолчанию служба grafana доступна в кластере с использованием типа ClusterIP, для доступа к ней извне изменим тип на NodePort.
 
 kubectl edit svc prometheus-grafana
 
@@ -95,22 +95,34 @@ Password: prom-operator
 
 ### 5. Установка и настройка CI/CD
 
-Делаем webhook для выполнения сборки из docker файла в gitlab
+Делаем webhook в github для выполнения сборки из docker файла 
 
 http://admin:11087da3e67146fdbdde47018c90a0ecca@dserv.dynu.com:8080/job/testapp-deploy/build?token=docker-build
 
-Делаем webhook для выполнения сборки из docker файла в gitlab и деплоя в kubernetes
+Делаем webhook в github для выполнения сборки из docker файла и деплоя в kubernetes
 
 http://admin:11087da3e67146fdbdde47018c90a0ecca@dserv.dynu.com:8080/job/testapp-deploy/build?token=docker-deploy
 
+При записи TAG v0.0.5 происходит автоматическая сборка и деплой (полный результат можно посмотреть в jenkins, ссылка ниже)
+
+![jenkins_deploy] (./img/jenkins_deploy.png)
+
+![jenkins_deploy] (./img/jenkins_deploy1.png)
 
 
-ссылка на приложение http://62.84.127.174:30001/
+Результат деплоя.
 
-ссылка на grafana http://62.84.127.174:30002 
+    root@ubuntu:~/.kube# kubectl get deploy -n stage -o wide
+    NAME      READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES                  SELECTOR
+    testapp   3/3     3            3           3h34m   testapp      mrgrav/testapp:v0.0.5   app=testapp
 
+ссылка на приложение http://130.193.51.34:30001/
+
+ссылка на grafana http://130.193.51.34:30002 
 login admin password prom-operator
 
-ссылка на jenkins http://62.84.127.174:30000
+ссылка на jenkins http://dserv.dynu.com:8080 
+login admin password !admin
+
 
 
